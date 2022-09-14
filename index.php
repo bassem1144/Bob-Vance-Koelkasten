@@ -7,33 +7,31 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Bob Vance</title>
-    
+
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-        rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
+
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#page-top">Bob Vance koelkasten</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#koelkasten">Koelkasten</a></li>
                     <li class="nav-item"><a class="nav-link" href="#verzekeringen">Verzekeringen</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reparaties">Reparaties</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#edit">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.php" style="color: blue;">Admin</a></li>
                 </ul>
             </div>
         </div>
@@ -76,52 +74,42 @@
             <hr class="divider" />
             <div class="row g-0">
                 <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid"
-                        src="https://s.brugman.nl/_processed_/4/e/csm_beko-amerikaanse-koelkast_ace3cf2709.jpg"
-                        alt="..." />
+                    <img class="img-fluid" src="https://s.brugman.nl/_processed_/4/e/csm_beko-amerikaanse-koelkast_ace3cf2709.jpg" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid"
-                        src="https://www.expert.nl/media/wysiwyg/Advies/Koelkasten/header-koelkast-maten.jpg"
-                        alt="..." />
+                    <img class="img-fluid" src="https://www.expert.nl/media/wysiwyg/Advies/Koelkasten/header-koelkast-maten.jpg" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://www.lg.com/nl/images/nl-Koelkasten-categoryselector-3.jpg"
-                        alt="..." />
+                    <img class="img-fluid" src="https://www.lg.com/nl/images/nl-Koelkasten-categoryselector-3.jpg" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid"
-                        src="https://cdn.myonlinestore.eu/93e497c5-6be1-11e9-a722-44a8421b9960/image/cache/full/a17899e50b081d846053751f2e50666992eef2c2.jpg?20220810122603"
-                        alt="..." />
+                    <img class="img-fluid" src="https://cdn.myonlinestore.eu/93e497c5-6be1-11e9-a722-44a8421b9960/image/cache/full/a17899e50b081d846053751f2e50666992eef2c2.jpg?20220810122603" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://dehanzewitgoed.nl/wp-content/uploads/2021/01/RF23R62E3B1.jpg"
-                        alt="..." />
+                    <img class="img-fluid" src="https://dehanzewitgoed.nl/wp-content/uploads/2021/01/RF23R62E3B1.jpg" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid"
-                        src="https://flevowitgoed.nl/image/cache/afbeeldingen/1-12-2021/koelkast-250x250.png"
-                        alt="..." />
+                    <img class="img-fluid" src="https://flevowitgoed.nl/image/cache/afbeeldingen/1-12-2021/koelkast-250x250.png" alt="..." />
                     <div class="portfolio-box-caption p-3">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -193,15 +181,13 @@
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                                    data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                    data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
                                 </div>
@@ -209,8 +195,7 @@
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                                    data-sb-validations="required" />
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
                                     required.
@@ -218,9 +203,7 @@
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text"
-                                    placeholder="Enter your message here..." style="height: 10rem"
-                                    data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                                 </div>
@@ -239,8 +222,7 @@
                                 <div class="text-center text-danger mb-3">Error sending message!</div>
                             </div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
-                                    type="submit">Submit</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
