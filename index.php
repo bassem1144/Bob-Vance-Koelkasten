@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="#koelkasten">Koelkasten</a></li>
                     <li class="nav-item"><a class="nav-link" href="#verzekeringen">Verzekeringen</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reparaties">Reparaties</a></li>
-                    <li class="nav-item"><a class="nav-link" href="admin.php" style="color: blue;">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./php/admin.php" style="color: blue;">Admin</a></li>
                 </ul>
             </div>
         </div>
