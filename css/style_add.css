@@ -1,36 +1,33 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(212, 211, 211);
 }
 
-p,
-h1,
-h3 {
-    font-size: 30px;
+
+h1 {
+    font-size: 40px;
     color: rgb(48, 53, 91);
 }
 
 form {
     font-size: 30px;
 }
-input{
+
+input {
     font-size: 25px;
     margin: 5px;
 }
 
 textarea {
-    height: 230px;
-    width: 500px;
-    display: flex;
-}
-#discriptionf{
     height: 100px;
     width: 500px;
     display: flex;
 }
-#submit{
+
+#submit {
     font-size: 20px;
     display: flex;
 }
-label{
-    color: rgb(41, 46, 80); 
+
+label {
+    color: rgb(41, 46, 80);
 }

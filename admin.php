@@ -32,9 +32,10 @@
         $sql = "SELECT * FROM koelkasten";
         $koelkasten = $databaseConnection->query($sql);
         echo '<h3>Alle koelkasten</h3>';
+        echo "<a href='add.php'>Toevoegen</a>";
         foreach ($koelkasten as $koelkast) { ?>
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?= $koelkast['image_url'] ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?= $koelkast['image_url'] ?>" alt="Image">
                 <div class="card-body">
                     <h5 class="card-title"><?= $koelkast['artikel_nummer'] ?> </h5>
                     <p class="card-text" style="font-size: 0.75em;"><?= $koelkast['beschrijving'] ?> </p>
@@ -44,10 +45,11 @@
                     <li class="list-group-item">Energie label: <?= $koelkast['energie_label'] ?></li>
                     <li class="list-group-item">Afmetingen: <?= $koelkast['afmetingen'] ?></li>
                     <li class="list-group-item">Rating: <?= $koelkast['rating'] ?></li>
+                    <li class="list-group-item">Staat: <?= $koelkast['staat'] ?></li>
                 </ul>
                 <div class="card-body">
                     <a href="edit.php?id=<?= $koelkast['id'] ?>" class="card-link">Wijzigen</a>
-                    <a href="#" class="card-link">Verwijderen</a>
+                    <a href="delete.php?id=<?= $koelkast['id'] ?>" class="card-link">Verwijderen</a>
                 </div>
             </div>
     <?php
@@ -58,7 +60,7 @@
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2022 - Bob Vance koelkasten</div>
+            <div class="small text-center text-muted">Copyright &copy; 2022 - Bob Vance Koelkasten</div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
