@@ -68,185 +68,189 @@
         </div>
     </section>
     <!-- koelkasten-->
-    <section class="page-section" id="koelkasten">
-        <div class="container-fluid p-0">
-            <h2 class="text-center mt-0">koelkasten</h2>
-            <hr class="divider" />
-            <div class="row g-0">
-                <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://s.brugman.nl/_processed_/4/e/csm_beko-amerikaanse-koelkast_ace3cf2709.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://www.expert.nl/media/wysiwyg/Advies/Koelkasten/header-koelkast-maten.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://www.lg.com/nl/images/nl-Koelkasten-categoryselector-3.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://cdn.myonlinestore.eu/93e497c5-6be1-11e9-a722-44a8421b9960/image/cache/full/a17899e50b081d846053751f2e50666992eef2c2.jpg?20220810122603" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://dehanzewitgoed.nl/wp-content/uploads/2021/01/RF23R62E3B1.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img class="img-fluid" src="https://flevowitgoed.nl/image/cache/afbeeldingen/1-12-2021/koelkast-250x250.png" alt="..." />
-                    <div class="portfolio-box-caption p-3">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- Verzekeringen-->
-        <section class="page-section" id="verzekeringen">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Verzekeringen</h2>
+    <section class="page-section" id="koelkasten" style="background-color: #eee;">
+        <div class="card-deck">
+            <div class="container py-5">
+                <h2 class="text-center mt-0">Koelkasten</h2>
                 <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">All-inclusive</h3>
-                            <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                                illum cumque nobis expedita repellendus. Facilis nihil possimus nemo deserunt. Qui saepe
-                                architecto nulla praesentium obcaecati dolores hic at, expedita ut!</p>
-                        </div>
+                <div class="row">
+                    <?php
+                    include './php/connection.php';
+                    try {
+                        $sql = "SELECT * FROM koelkasten";
+                        $koelkasten = $pdo->query($sql);
+                        foreach ($koelkasten as $koelkast) { ?>
+                            <div class="col-md-12 col-lg-4 mb-4 mb-lg-0 my-4">
+                                <div class="card">
+                                    <div class="d-flex justify-content-between p-3">
+                                        <!-- <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong" style="width: 35px; height: 35px;">
+                                            <p class="text-white mb-0 small"><?= $koelkast['staat'] ?></p>
+                                        </div> -->
+                                    </div>
+                                    <img src="<?= $koelkast['image_url'] ?>" class="card-img-top" alt="koelkast-foto" />
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="small"><a href="#koelkasten" class="text-muted">Koelkasten</a></p>
+                                            <p class="small text-danger"><s>$1099</s></p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <h5 class="mb-0"><?= $koelkast['artikel_nummer'] ?></h5>
+                                            <h5 class="text-dark mb-0">&euro; <?= $koelkast['prijs'] ?></h5>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between mb-2 flex-column ">
+                                            <p class="text-muted fw-bold"><?= $koelkast['beschrijving'] ?></p>
+                                            <p class="text-muted mb-2">Staat: <span class="fw-bold"><?= $koelkast['staat'] ?></span></p>
+                                            <p class="text-muted mb-2">Energie label: <span class="fw-bold"><?= $koelkast['energie_label'] ?></span></p>
+                                            <p class="text-muted mb-2">Afmetingen: <span class="fw-bold"><?= $koelkast['afmetingen'] ?></span></p>
+
+
+                                            <div class="ms-auto text-info">
+                                                <i>Rating: <?= $koelkast['rating'] ?></i>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    } catch (PDOException $error) {
+                        echo $error->getMessage();
+                    } ?>
+                </div>
+            </div>
+    </section>
+    <!-- Verzekeringen-->
+    <section class="page-section" id="verzekeringen">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Verzekeringen</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">All-inclusive</h3>
+                        <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                            illum cumque nobis expedita repellendus. Facilis nihil possimus nemo deserunt. Qui saepe
+                            architecto nulla praesentium obcaecati dolores hic at, expedita ut!</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">motor-only</h3>
-                            <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-                                temporibus voluptate molestiae fugit culpa, eveniet eligendi perspiciatis vitae
-                                voluptatum nihil officiis alias blanditiis vel autem omnis laboriosam ipsum corporis
-                                obcaecati.</p>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">motor-only</h3>
+                        <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+                            temporibus voluptate molestiae fugit culpa, eveniet eligendi perspiciatis vitae
+                            voluptatum nihil officiis alias blanditiis vel autem omnis laboriosam ipsum corporis
+                            obcaecati.</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">3e soort</h3>
-                            <p class="text-muted mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Aperiam, consequuntur pariatur iure aut dolores quibusdam aliquid nesciunt, tempora
-                                maxime magnam, voluptatem neque. Quidem vero fugiat nisi totam assumenda molestias
-                                accusantium.</p>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">3e soort</h3>
+                        <p class="text-muted mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Aperiam, consequuntur pariatur iure aut dolores quibusdam aliquid nesciunt, tempora
+                            maxime magnam, voluptatem neque. Quidem vero fugiat nisi totam assumenda molestias
+                            accusantium.</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">4e soort</h3>
-                            <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                necessitatibus velit quia possimus autem. Fugiat suscipit assumenda beatae rerum,
-                                excepturi iusto rem fuga commodi quisquam culpa quod aut hic ut!</p>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">4e soort</h3>
+                        <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                            necessitatibus velit quia possimus autem. Fugiat suscipit assumenda beatae rerum,
+                            excepturi iusto rem fuga commodi quisquam culpa quod aut hic ut!</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- reparaties-->
-        <section class="page-section" id="reparaties">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Meld hier je reparatie!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Heeft u een probleem met uw koelkast? Wij repareren het graag voor u!
-                        </p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
-                                </div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
-                                    required.
-                                </div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                                </div>
-                            </div>
-                            <!-- Submit success message-->>
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    <br />
-                                    <a>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <div class="d-none" id="submitErrorMessage">
-                                <div class="text-center text-danger mb-3">Error sending message!</div>
-                            </div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>020 1234567</div>
-                    </div>
+        </div>
+    </section>
+    <!-- reparaties-->
+    <section class="page-section" id="reparaties">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Meld hier je reparatie!</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Heeft u een probleem met uw koelkast? Wij repareren het graag voor u!
+                    </p>
                 </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5">
-                <div class="small text-center text-muted">Copyright &copy; 2022 - Bob Vance koelkasten</div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
+                            </div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Phone number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
+                                required.
+                            </div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                            </div>
+                        </div>
+                        <!-- Submit success message-->>
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                <br />
+                                <a>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                    </form>
+                </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                    <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                    <div>020 1234567</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy; 2022 - Bob Vance koelkasten</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>
