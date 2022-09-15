@@ -1,5 +1,6 @@
 <?php
-session_start();
+include 'connection.php';
+
 
 $id = $_GET['id'];
 
@@ -7,7 +8,6 @@ $host = "localhost";
 $databaseName = "bob_vance";
 $username = "bit_academy";
 $password = "bit_academy";
-
 $dsn = "mysql:host=$host;dbname=$databaseName";
 
 try {

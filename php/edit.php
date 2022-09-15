@@ -11,23 +11,14 @@
 
 <body>
     <?php
+    include 'connection.php';
     session_start();
-
 
     $id = $_GET['id'];
 
-
     echo "<a href='admin.php'>Terug</a>";
-    $host = "localhost";
-    $databaseName = "bob_vance";
-    $username = "bit_academy";
-    $password = "bit_academy";
-
-    $dsn = "mysql:host=$host;dbname=$databaseName";
 
     try {
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM koelkasten WHERE ID = $id";
         $koelkast = $pdo->query($sql)->fetch();
         echo <<<END

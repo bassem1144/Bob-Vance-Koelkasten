@@ -11,20 +11,11 @@
 
 <body>
     <?php
-    session_start();
+    include 'connection.php';
 
     echo "<a href='admin.php'>Terug</a>";
-    $host = "localhost";
-    $databaseName = "bob_vance";
-    $username = "bit_academy";
-    $password = "bit_academy";
 
-    $dsn = "mysql:host=$host;dbname=$databaseName";
-
-    try {
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo <<<END
+    echo <<<END
     <h1>Koelkast toevoegen</h1>
     <form method="post" action="add.php">
     
@@ -55,6 +46,7 @@
     <input name="submit" type="submit" value="Submit">
     </form>
     END;
+    try {
         if (isset($_POST['submit'])) {
             $artikel = $_POST['artikel_nummer'];
             $prijs = $_POST['prijs'];

@@ -21,16 +21,10 @@
 
 <body>
     <?php
-    $host = "localhost";
-    $databaseName = "bob_vance";
-    $username = "bit_academy";
-    $password = "bit_academy";
-    $dsn = "mysql:host=$host;dbname=$databaseName";
+    include 'connection.php';
     try {
-        $databaseConnection = new PDO($dsn, $username, $password);
-        $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM koelkasten";
-        $koelkasten = $databaseConnection->query($sql);
+        $koelkasten = $pdo->query($sql);
         echo '<h3>Alle koelkasten</h3>';
         echo "<a href='add.php'>Toevoegen</a>";
         foreach ($koelkasten as $koelkast) { ?>
