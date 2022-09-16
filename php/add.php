@@ -15,6 +15,7 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,41 +26,71 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="admin.php">Home</a>
                 <a class="nav-item nav-link active" href="add.php">Toevoegen</a>
-                <a href="../index.php" class="btn btn-outline-danger" type="button">Uitloggen</a>
+                <a id="uitloggen" href="../index.php" class="btn btn-outline-danger" type="button">Uitloggen</a>
             </div>
         </div>
     </nav>
-    <h1>Koelkast toevoegen</h1>
-    <form class="mx-auto d-flex justify-content-center flex-column" method="post" action="add.php">
 
-        <div class="">
-            <label class="form-label" for="artikel_nummer">artikel_nummer</label>
-            <input class="form-control" type="text" name="artikel_nummer"><br>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-3">Koelkast toevoegen</h2>
+                <hr class="divider" />
+            </div>
         </div>
-        <label class="form-label" for="prijs">prijs</label>
-        <input class="form-control" type="text" name="prijs"><br>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                <form class="mx-auto d-flex justify-content-center flex-column" method="post" action="add.php#submit">
 
-        <label class="form-label" for="rating">rating</label>
-        <input class="form-control" type="text" name="rating"><br>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="artikel_nummer" id="artikel_nummer" type="text" placeholder="artikel_nummer..." />
+                        <label class="form-label" for="artikel_nummer">Artikel nummer</label>
+                    </div>
 
-        <label class="form-label" for="afmetingen">afmetingen</label>
-        <input class="form-control" type="text" name="afmetingen"><br>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="prijs" id="prijs" type="text" placeholder="prijs..." />
+                        <label class="form-label" for="prijs">Prijs</label>
 
-        <label class="form-label" for="image_url">image_url</label>
-        <input class="form-control" type="text" name="image_url"><br>
+                    </div>
 
-        <label class="form-label" for="energie_label">energie_label</label>
-        <input class="form-control" type="text" name="energie_label"><br>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="rating" id="rating" type="text" placeholder="rating..." />
+                        <label class="form-label" for="rating">Rating</label>
+                    </div>
 
-        <label class="form-label" for="beschrijving">beschrijving</label>
-        <textarea class="form-control" name="beschrijving" rows="3" cols="20"></textarea><br>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="afmetingen" id="afmetingen" type="text" placeholder="afmetingen..." />
+                        <label class="form-label" for="afmetingen">Afmetingen (B x H x D)</label>
+                    </div>
 
-        <label class="form-label" for="staat">staat</label>
-        <input class="form-control" type="text" name="staat"><br>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="image_url" id="image_url" type="text" placeholder="image_url..." />
+                        <label class="form-label" for="image_url">Image URL</label>
+                    </div>
 
-        <input class="btn btn-primary" name="submit" type="submit" value="Submit">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="energie_label" id="energie_label" type="text" placeholder="energie_label..." />
+                        <label class="form-label" for="energie_label">Energie label</label>
+                    </div>
 
-    </form>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" name="beschrijving" id="beschrijving" type="text" placeholder="beschrijving..." style="height: 10rem"></textarea>
+                        <label class="form-label" for="beschrijving">Beschrijving</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <select class="form-control" name="staat" id="staat">
+                            <option value="nieuw">Nieuw</option>
+                            <option value="tweedehands">Tweedehands</option>
+                        </select>
+                    </div>
+                    <input class="btn btn-primary" name="submit" type="submit" value="Toevoegen">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
     <?php
     include 'connection.php';
     try {
@@ -89,8 +120,7 @@
 
             $stmt->execute();
 
-            echo "Bezig met opslaan...";
-            header("Refresh:1");
+            echo "<h3 class='justify-content-center text-center' id='submit'>Koelkast is toegevoegd</h3>";
         }
     } catch (PDOException $error) {
         echo $error->getMessage();

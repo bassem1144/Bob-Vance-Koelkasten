@@ -30,7 +30,6 @@
     </nav>
     <div class="row d-flex justify-content-center">
         <?php
-        echo '<h3>Alle koelkasten</h3>';
         include 'connection.php';
         try {
             $sql = "SELECT * FROM koelkasten";
@@ -45,7 +44,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Prijs: &euro; <?= $koelkast['prijs'] ?></li>
                         <li class="list-group-item">Energie label: <?= $koelkast['energie_label'] ?></li>
-                        <li class="list-group-item">Afmetingen: <?= $koelkast['afmetingen'] ?></li>
+                        <li class="list-group-item">Afmetingen (B x H x D): <?= $koelkast['afmetingen'] ?></li>
                         <li class="list-group-item">Rating: <?= $koelkast['rating'] ?></li>
                         <li class="list-group-item">Staat: <?= $koelkast['staat'] ?></li>
                     </ul>

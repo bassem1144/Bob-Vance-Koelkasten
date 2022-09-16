@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#koelkasten">Koelkasten</a></li>
                     <li class="nav-item"><a class="nav-link" href="#verzekeringen">Verzekeringen</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reparaties">Reparaties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-outline-succes" href="./php/admin.php" style="color: #20c997;">Admin</a></li>
                 </ul>
             </div>
@@ -59,10 +59,8 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mt-0">We hebben alles wat je nodig hebt</h2>
                     <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eum
-                        sunt dolores delectus. Minima nisi magni omnis sint animi, modi explicabo, vero totam
-                        repudiandae esse nam ratione. Sunt, cupiditate vitae! </p>
-                    <a class="btn btn-light btn-xl" href="#koelkasten">Get Started!</a>
+                    <p class="text-white-75 mb-4">Bob Vance is sinds 1983 begonnen met verkopen van koelkasten. Onze koelkasten zijn van hoogste kwaliteit. Dat kunnen we U verzekeren omdat wij onze koelkasten regelmatig testen. </p>
+                    <a class="btn btn-light btn-xl" href="#koelkasten">Bekijk onze koelkasten!</a>
                 </div>
             </div>
         </div>
@@ -83,9 +81,9 @@
                             <div class="col-md-12 col-lg-4 mb-4 mb-lg-0 my-4">
                                 <div class="card">
                                     <div class="d-flex justify-content-between p-3">
-                                        <!-- <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong" style="width: 35px; height: 35px;">
-                                            <p class="text-white mb-0 small"><?= $koelkast['staat'] ?></p>
-                                        </div> -->
+                                        <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong" style="width: 55px; height: 35px;">
+                                            <p class="text-white m-3 small text-uppercase"><?= $koelkast['staat'] ?></p>
+                                        </div>
                                     </div>
                                     <img src="<?= $koelkast['image_url'] ?>" class="card-img-top" alt="koelkast-foto" />
                                     <div class="card-body">
@@ -101,14 +99,10 @@
 
                                         <div class="d-flex justify-content-between mb-2 flex-column ">
                                             <p class="text-muted fw-bold"><?= $koelkast['beschrijving'] ?></p>
-                                            <p class="text-muted mb-2">Staat: <span class="fw-bold"><?= $koelkast['staat'] ?></span></p>
                                             <p class="text-muted mb-2">Energie label: <span class="fw-bold"><?= $koelkast['energie_label'] ?></span></p>
-                                            <p class="text-muted mb-2">Afmetingen: <span class="fw-bold"><?= $koelkast['afmetingen'] ?></span></p>
-
-
-                                            <div class="ms-auto text-info">
+                                            <p class="text-muted mb-2">Afmetingen (B x H x D): <span class="fw-bold"><?= $koelkast['afmetingen'] ?></span></p>
+                                            <div class="ms-auto text-warning">
                                                 <i>Rating: <?= $koelkast['rating'] ?></i>
-
                                             </div>
                                         </div>
                                     </div>
@@ -131,7 +125,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">All-inclusive</h3>
+                        <h3 class="h4 mb-2">All Risk Flex Basis</h3>
                         <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
                             illum cumque nobis expedita repellendus. Facilis nihil possimus nemo deserunt. Qui saepe
                             architecto nulla praesentium obcaecati dolores hic at, expedita ut!</p>
@@ -140,7 +134,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">motor-only</h3>
+                        <h3 class="h4 mb-2">All Risk Flex Premium</h3>
                         <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
                             temporibus voluptate molestiae fugit culpa, eveniet eligendi perspiciatis vitae
                             voluptatum nihil officiis alias blanditiis vel autem omnis laboriosam ipsum corporis
@@ -150,7 +144,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">3e soort</h3>
+                        <h3 class="h4 mb-2">All Risk Flex Gold</h3>
                         <p class="text-muted mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Aperiam, consequuntur pariatur iure aut dolores quibusdam aliquid nesciunt, tempora
                             maxime magnam, voluptatem neque. Quidem vero fugiat nisi totam assumenda molestias
@@ -160,7 +154,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">4e soort</h3>
+                        <h3 class="h4 mb-2">motor-only</h3>
                         <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                             necessitatibus velit quia possimus autem. Fugiat suscipit assumenda beatae rerum,
                             excepturi iusto rem fuga commodi quisquam culpa quod aut hic ut!</p>
@@ -170,7 +164,7 @@
         </div>
     </section>
     <!-- Contact-->
-    <section class="page-section" id="reparaties">
+    <section class="page-section" id="contact">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">

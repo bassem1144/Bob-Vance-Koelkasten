@@ -22,9 +22,9 @@ try {
 
     $stmt->execute();
 
-    echo "koelkast is verwijderd!";
+    echo "<h3 class='justify-content-center text-center'>koelkast is verwijderd!</h3>";
 
-    header("refresh:3; url=admin.php");
+    header("refresh:1.5; url=admin.php");
 } catch (PDOException $error) {
     echo $error->getMessage();
 }
