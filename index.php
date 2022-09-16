@@ -47,7 +47,7 @@
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 mb-5">Naast het verkopen van koelkasten bieden we ook verzekeringen aan voor
                         je koelkast. Ook bieden we reparaties aan</p>
-                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    <a class="btn btn-primary btn-xl" href="#about">Meer weten</a>
                 </div>
             </div>
         </div>
