@@ -169,14 +169,14 @@
             </div>
         </div>
     </section>
-    <!-- reparaties-->
+    <!-- Contact-->
     <section class="page-section" id="reparaties">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Meld hier je reparatie!</h2>
+                    <h2 class="mt-0">Neem contact met ons op!</h2>
                     <hr class="divider" />
-                    <p class="text-muted mb-5">Heeft u een probleem met uw koelkast? Wij repareren het graag voor u!
+                    <p class="text-muted mb-5">Heeft u een vraag? Wij helpen u graag verder!
                     </p>
                 </div>
             </div>
@@ -186,21 +186,21 @@
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                            <label for="name">Full name</label>
+                            <label for="name">Naam</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
+                            <input class="form-control" id="email" type="email" placeholder="name@voorbeeld.com" data-sb-validations="required,email" />
+                            <label for="email">Email adres</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
                             </div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
+                            <input class="form-control" id="phone" type="tel" placeholder="0612345678" data-sb-validations="required" />
+                            <label for="phone">Telefoon nummer</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
                                 required.
                             </div>
@@ -208,17 +208,15 @@
                         <!-- Message input-->
                         <div class="form-floating mb-3">
                             <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
+                            <label for="message">Bericht</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                             </div>
                         </div>
-                        <!-- Submit success message-->>
+                        <!-- Submit success message-->
                         <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
                                 <div class="fw-bolder">Form submission successful!</div>
                                 <br />
-                                <a>
-                                </a>
                             </div>
                         </div>
                         <!-- Submit error message-->
@@ -233,7 +231,10 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0">
                     <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                    <div>020 1234567</div>
+                    <p>020 1234567</p>
+                    <i class="bi bi-envelope  fs-2 mb-3 text-muted"></i>
+                    <p>info@bobvance.nl</p>
+
                 </div>
             </div>
         </div>
